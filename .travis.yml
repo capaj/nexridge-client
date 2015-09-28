@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - '4.1.1'
+addons:
+  mariadb: '10.0'
+before_script:
+  - sleep 1
+before_install:
+

@@ -1,0 +1,38 @@
+{
+  "name": "nexridge-client",
+  "version": "0.0.1",
+  "description": "knex.js powered framework client for querying your SQL DB over the network",
+  "main": "nexridge-client.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capaj/nexridge-client.git"
+  },
+  "keywords": [
+    "knex.js",
+    "sql"
+  ],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capaj/nexridge-client/issues"
+  },
+  "homepage": "https://github.com/capaj/nexridge-client#readme",
+  "jspm": {
+    "dependencies": {
+      "socket.io-rpc-client": "github:capaj/socket.io-rpc-client@^0.9.11",
+      "tgriesser/knex": "github:tgriesser/knex@^0.8.6"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "dependencies": {
+    "knex": "^0.8.6",
+    "socket.io-rpc-client": "^0.9.11"
+  }
+}

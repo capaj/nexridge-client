@@ -1,2 +1,10 @@
-# nexridge-client
-knex.js powered framework client for querying your SQL DB over the network
+# Nexridge-client
+[knex.js](http://knexjs.org/#Builder-main) powered framework client for querying your SQL DB over the network, to be used in conjunction with [serverside framework](https://github.com/capaj/nexridge)
+
+## Install
+To browser with [JSPM](https://github.com/jspm/jspm-cli)
+```
+jspm i nexridge-client
+```
+
+node.js support will come in next versions.

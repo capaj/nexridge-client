@@ -16,7 +16,9 @@ System.config({
   map: {
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.25",
+    "bluebird": "npm:bluebird@2.10.1",
     "core-js": "npm:core-js@1.2.0",
+    "lodash": "npm:lodash@3.10.1",
     "socket.io-rpc-client": "github:capaj/socket.io-rpc-client@0.9.11",
     "tgriesser/knex": "github:tgriesser/knex@0.8.6",
     "github:capaj/socket.io-rpc-client@0.9.11": {
@@ -103,6 +105,9 @@ System.config({
       "util": "npm:util@0.10.3"
     },
     "npm:babel-runtime@5.8.25": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:bluebird@2.10.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:browserify-aes@1.0.5": {
@@ -247,6 +252,9 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:lodash@3.10.1": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:miller-rabin@2.0.1": {
       "bn.js": "npm:bn.js@2.2.0",

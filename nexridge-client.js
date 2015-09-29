@@ -1,28 +1,35 @@
 import Knex from 'tgriesser/knex/build/knex'
 import rpcClient from "socket.io-rpc-client"
 
-function Nexridge(serverUrl) {
+function nexridge(serverUrl) {
   var rpc = rpcClient(serverUrl)
 
-  let query = Knex({})
-  query.then = function(){
-    var cache = []
-    let JSON = JSON.stringify(o, function(key, value) {
-      if (typeof value === 'object' && value !== null) {
-        if (cache.indexOf(value) !== -1) {
-          // Circular reference found, discard key
-          return
+  return function(){
+    let qb = Knex({})
+
+    var query = qb.apply(qb, arguments)
+    query.then = function () {
+      var cache = []
+      delete query.client
+      let queryPayload = JSON.parse(JSON.stringify(query, function (key, value) {
+        if (typeof value === 'object' && value !== null) {
+          if (cache.indexOf(value) !== -1) {
+            // Circular reference found, discard key
+            return
+          }
+          cache.push(value)
         }
-        cache.push(value)
-      }
-      return value
-    });
-    cache = null
-    return rpc('query')(JSON)
+        return value
+      }))
+      cache = null
+
+      var promise = rpc('nexridge.query')(queryPayload)
+      promise.then.apply(promise, arguments)
+    }
+    return query
   }
-  return query
 }
 
-export default Nexridge
+export default nexridge
 
 

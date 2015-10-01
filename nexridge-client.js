@@ -1,5 +1,6 @@
-import Knex from 'tgriesser/knex/build/knex'
-import rpcClient from "socket.io-rpc-client"
+'use strict'
+let Knex = require('knex/build/knex')
+let rpcClient = require("socket.io-rpc-client")
 
 function nexridge(serverUrl) {
   var rpc = rpcClient(serverUrl)
@@ -30,6 +31,4 @@ function nexridge(serverUrl) {
   }
 }
 
-export default nexridge
-
-
+module.exports = nexridge

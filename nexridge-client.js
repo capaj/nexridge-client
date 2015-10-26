@@ -1,11 +1,11 @@
 'use strict'
 let Knex = require('knex/build/knex')
-let rpcClient = require("socket.io-rpc-client")
+let rpcClient = require('socket.io-rpc-client')
 
-function nexridge(serverUrl) {
+function nexridge (serverUrl) {
   var rpc = rpcClient(serverUrl)
 
-  return function(){
+  return function () {
     let qb = Knex({})
 
     var query = qb.apply(qb, arguments)

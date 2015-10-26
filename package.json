@@ -22,7 +22,7 @@
   "homepage": "https://github.com/capaj/nexridge-client#readme",
   "jspm": {
     "dependencies": {
-      "bluebird": "npm:bluebird@^2.10.1",
+      "bluebird": "npm:bluebird@^2.10.2",
       "lodash": "npm:lodash@^3.10.1",
       "socket.io-rpc-client": "github:capaj/socket.io-rpc-client@^0.9.11",
       "tgriesser/knex": "github:tgriesser/knex@^0.8.6"
